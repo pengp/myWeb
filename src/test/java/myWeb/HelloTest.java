@@ -18,8 +18,13 @@
 package myWeb;
 
 import org.junit.Test;
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+import org.springframework.core.io.ClassPathResource;
 
 import com.shopin.springTest.SayHello;
 
@@ -27,10 +32,29 @@ public class HelloTest {
 
 	@Test
 	public void HelloTest(){
+		
+		/**
+		 * 基本用法
+		 
 		ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
 		SayHello hello = ac.getBean("hello", SayHello.class);
 		hello.sayHello();
+		*/
+		
+		/**
+		 * 编程方式使用
+		 
+		ClassPathResource res = new ClassPathResource("applicationContext.xml");
+		DefaultListableBeanFactory factory = new DefaultListableBeanFactory();
+		XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(factory);
+		reader.loadBeanDefinitions(res);
+		SayHello hello = (SayHello) factory.getBean("hello");
+		hello.sayHello();
+		*/
+		
+		ApplicationContext ac = new FileSystemXmlApplicationContext();
+		
+		
 	}
-
 }
 

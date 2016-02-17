@@ -20,7 +20,7 @@ public class SayHelloImpl implements SayHello {
 
 	@Override
 	public void sayHello() {
-		System.out.println("hello");
+		System.out.println("----------------hello----------------");
 	}
 }
 
