@@ -22,26 +22,8 @@ import java.util.Date;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * ClassName:Log4jTest <br/>
- * Function: TODO ADD FUNCTION. <br/>
- * Reason:	 TODO ADD REASON. <br/>
- * Date:     2015年9月2日 下午4:18:45 <br/>
- * @author   Administrator
- * @version  
- * @since    JDK 1.6
- * @see 	 
- */
-/**
- * ClassName: Log4jTest <br/>
- * Function: TODO ADD FUNCTION. <br/>
- * Reason: TODO ADD REASON(可选). <br/>
- * date: 2015年9月2日 下午4:18:45 <br/>
- *
- * @author Administrator
- * @version 
- * @since JDK 1.6
- */
+
+
 public class Log4jTest {
 
 	/**
