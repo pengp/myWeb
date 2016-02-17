@@ -19,29 +19,15 @@ package com.shopin.domo;
 
 import java.util.Date;
 
+import org.apache.http.client.HttpClient;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-/**
- * ClassName:Log4jTest <br/>
- * Function: TODO ADD FUNCTION. <br/>
- * Reason:	 TODO ADD REASON. <br/>
- * Date:     2015年9月2日 下午4:18:45 <br/>
- * @author   Administrator
- * @version  
- * @since    JDK 1.6
- * @see 	 
- */
-/**
- * ClassName: Log4jTest <br/>
- * Function: TODO ADD FUNCTION. <br/>
- * Reason: TODO ADD REASON(可选). <br/>
- * date: 2015年9月2日 下午4:18:45 <br/>
- *
- * @author Administrator
- * @version 
- * @since JDK 1.6
- */
+
 public class Log4jTest {
 
 	/**
@@ -53,9 +39,7 @@ public class Log4jTest {
 	 */
 	public static void main(String[] args) {
 		
-		Logger logger = LoggerFactory.getLogger(Log4jTest.class);
-		logger.info("hello {}", new Date());
-		
+	
 	}
 }
 
