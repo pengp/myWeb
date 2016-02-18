@@ -17,7 +17,9 @@
 
 package myWeb;
 
+import org.junit.Assert;
 import org.junit.Test;
+import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
@@ -52,9 +54,17 @@ public class HelloTest {
 		hello.sayHello();
 		*/
 		
-		ApplicationContext ac = new FileSystemXmlApplicationContext();
+//		ApplicationContext ac = new FileSystemXmlApplicationContext();
 		
 		
+	}
+	
+	@SuppressWarnings("deprecation")
+	@Test
+	public void testHello(){
+		BeanFactory bf = new XmlBeanFactory(new ClassPathResource("applicationContext.xml"));
+		SayHello hello = (SayHello)bf.getBean("hello");
+		hello.sayHello();
 	}
 }
 
