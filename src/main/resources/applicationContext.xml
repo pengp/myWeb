@@ -9,6 +9,13 @@
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-	<bean id="hello" class="com.shopin.springTest.SayHelloImpl"></bean>
+	<bean id="hello" name="bean" class="com.shopin.springTest.SayHelloImpl">
+		<constructor-arg index="0" value="hello pp!"></constructor-arg>
+	</bean>
+	<bean id="stringBeanFactory" class="com.shopin.springTest.StringBeanFactory">
+	</bean>
+	<bean id="bean4" factory-bean="stringBeanFactory" factory-method="newInstance">
+		<constructor-arg index="0" value="hello hehe!"></constructor-arg>
+	</bean>
 
 </beans>

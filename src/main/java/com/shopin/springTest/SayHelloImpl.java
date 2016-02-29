@@ -17,10 +17,22 @@
 
 package com.shopin.springTest;
 public class SayHelloImpl implements SayHello {
+	private String message;
+
+	
+	public SayHelloImpl(String message) {
+		super();
+		this.message = message;
+	}
+
+	
+	public SayHelloImpl() {
+		this.message = "hello msater!";
+	}
 
 	@Override
 	public void sayHello() {
-		System.out.println("hello---hello");
+		System.out.println(this.message);
 	}
 }
 

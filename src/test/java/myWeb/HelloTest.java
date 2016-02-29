@@ -37,11 +37,12 @@ public class HelloTest {
 		
 		/**
 		 * 基本用法
-		 
+		 */
 		ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
 		SayHello hello = ac.getBean("hello", SayHello.class);
 		hello.sayHello();
-		*/
+		
+		
 		
 		/**
 		 * 编程方式使用
@@ -63,8 +64,10 @@ public class HelloTest {
 	@Test
 	public void testHello(){
 		BeanFactory bf = new XmlBeanFactory(new ClassPathResource("applicationContext.xml"));
-		SayHello hello = (SayHello)bf.getBean("hello");
-		hello.sayHello();
+		/*SayHello sayHello = (SayHello) bf.getBean("bean");
+		sayHello.sayHello();*/
+		SayHello sf = bf.getBean("bean4",SayHello.class);
+		sf.sayHello();
 	}
 }
 
