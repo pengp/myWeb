@@ -15,12 +15,12 @@
  *
  */
 
-package com.shopin.springTest;
+package com.shopin.springTest2;
 
 public class StringBeanFactory {
 
 	
-	public  SayHello newInstance(String message){
+	public  static SayHello newInstance(String message){
 		return new SayHelloImpl(message);
 	}
 }

@@ -15,7 +15,7 @@
  *
  */
 
-package com.shopin.springTest;
+package com.shopin.springTest2;
 public class SayHelloImpl implements SayHello {
 	private String message;
 

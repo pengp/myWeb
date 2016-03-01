@@ -9,13 +9,22 @@
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-	<bean id="hello" name="bean" class="com.shopin.springTest.SayHelloImpl">
+	<!-- 默认构造方法实例化 -->
+	<bean id="hello" name="bean" class="com.shopin.springTest2.SayHelloImpl"></bean>
+	
+	<!-- 带参数构造方法实例化 -->
+	<bean id="hello1" name="hello1" class="com.shopin.springTest2.SayHelloImpl">
 		<constructor-arg index="0" value="hello pp!"></constructor-arg>
 	</bean>
-	<bean id="stringBeanFactory" class="com.shopin.springTest.StringBeanFactory">
+	
+	<!-- 静态工厂实例化bean -->
+	<bean id="hello2" class="com.shopin.springTest2.StringBeanFactory" factory-method="newInstance">
+		<constructor-arg index="0" value="hello pengp!"></constructor-arg>
 	</bean>
-	<bean id="bean4" factory-bean="stringBeanFactory" factory-method="newInstance">
-		<constructor-arg index="0" value="hello hehe!"></constructor-arg>
+	
+	<bean id="sampleFactory" class="com.shopin.springTest2.SampleBeanFactory"></bean>
+	<bean id="hello3" factory-bean="sampleFactory" factory-method="newInstance">
+		<constructor-arg index="0" value="hello pu!"></constructor-arg>
 	</bean>
 
 </beans>
