@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<!-- 构造器注入 -->
+	<bean id="hello1" name="bean" class="com.shopin.springTest2.SayHelloImpl">
+		<!----> <constructor-arg index="0" value="hello Injection!"></constructor-arg> 
+		<!----> <constructor-arg type="java.lang.String" value="hello type!"></constructor-arg> 
+		<constructor-arg name="message" value="hello message!"></constructor-arg>
+	</bean>
+	
+
+
+</beans>
