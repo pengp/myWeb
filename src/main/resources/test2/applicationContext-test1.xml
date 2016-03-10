@@ -11,10 +11,40 @@
 
 	<!-- 构造器注入 -->
 	<bean id="hello1" name="bean" class="com.shopin.springTest2.SayHelloImpl">
-		<!----> <constructor-arg index="0" value="hello Injection!"></constructor-arg> 
-		<!----> <constructor-arg type="java.lang.String" value="hello type!"></constructor-arg> 
+		<!-- <constructor-arg index="0" value="hello Injection!"></constructor-arg> -->
+		<!-- <constructor-arg type="java.lang.String" value="hello type!"></constructor-arg> -->
 		<constructor-arg name="message" value="hello message!"></constructor-arg>
 	</bean>
+	
+	<!-- setter方法注入 -->
+	<bean id="hello2" class="com.shopin.springTest2.SayHelloImpl">
+		<property name="message" value="hello error!"></property>
+	</bean>
+	
+	<!-- 注入 list -->
+	<bean id="hello3" class="com.shopin.springTest2.SayHelloImpl">
+		<property name="lists">
+			<list value-type="java.lang.String">
+				<value>aaa</value>
+				<value>bbb</value>
+				<value>ccc</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- 注入set集合,如果元素重复,那么不能添加进去 -->
+	<bean id="hello4" class="com.shopin.springTest3.SetTestBean">
+		<property name="values">
+			<set value-type="java.lang.String">
+				<value>aaa</value>
+				<value>bbb</value>
+				<value>aaa</value>
+			</set>
+		</property>
+		
+	</bean>
+	
+	
 	
 
 

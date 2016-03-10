@@ -16,10 +16,30 @@
  */
 
 package com.shopin.springTest2;
+
+import java.util.List;
+
 public class SayHelloImpl implements SayHello {
 	private String message;
+	
+	private List lists;
 
 	
+	public List getLists() {
+		return lists;
+	}
+
+
+	public void setLists(List lists) {
+		this.lists = lists;
+	}
+
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+
 	public SayHelloImpl(String message) {
 		super();
 		this.message = message;
