@@ -26,7 +26,6 @@
 		<property name="lists">
 			<list value-type="java.lang.String">
 				<value>aaa</value>
-				<value>bbb</value>
 				<value>ccc</value>
 			</list>
 		</property>
@@ -43,9 +42,5 @@
 		</property>
 		
 	</bean>
-	
-	
-	
-
 
 </beans>
